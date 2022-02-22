@@ -1,0 +1,255 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr User 8268 5827
+encoding utf-8
+Sheet 1 1
+Title "STM8 board"
+Date "2022-02-22"
+Rev "1"
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L power:GND #PWR0101
+U 1 1 5E15477B
+P 4000 3200
+F 0 "#PWR0101" H 4000 2950 50  0001 C CNN
+F 1 "GND" H 4005 3027 50  0000 C CNN
+F 2 "" H 4000 3200 50  0001 C CNN
+F 3 "" H 4000 3200 50  0001 C CNN
+	1    4000 3200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4000 2500 4000 3150
+NoConn ~ 3700 2500
+$Comp
+L Switch:SW_Push_SPDT SW1
+U 1 1 5E170521
+P 3400 2850
+F 0 "SW1" H 3400 3135 50  0000 C CNN
+F 1 "Hours" H 3400 3044 50  0000 C CNN
+F 2 "Switches:SWITCH_SPDT_PTH_11.6X4.0MM" H 3400 3050 50  0001 C CNN
+F 3 "~" H 3400 3050 50  0001 C CNN
+	1    3400 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_Push_SPDT SW2
+U 1 1 5E17111F
+P 3400 3150
+F 0 "SW2" H 3400 2800 50  0000 C CNN
+F 1 "Mins" H 3400 2900 50  0000 C CNN
+F 2 "Switches:SWITCH_SPDT_PTH_11.6X4.0MM" H 3400 3350 50  0001 C CNN
+F 3 "~" H 3400 3350 50  0001 C CNN
+	1    3400 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR01
+U 1 1 5E17522D
+P 3200 3200
+F 0 "#PWR01" H 3200 2950 50  0001 C CNN
+F 1 "GND" H 3205 3027 50  0000 C CNN
+F 2 "" H 3200 3200 50  0001 C CNN
+F 3 "" H 3200 3200 50  0001 C CNN
+	1    3200 3200
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	3800 2500 3800 2950
+Wire Wire Line
+	3900 2500 3900 3250
+Wire Wire Line
+	3600 2950 3800 2950
+$Comp
+L Connector:Conn_01x02_Male J3
+U 1 1 5E29C6D2
+P 4400 2750
+F 0 "J3" H 4350 2750 50  0000 R CNN
+F 1 "3V3 Bypass" H 4350 2650 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 4400 2750 50  0001 C CNN
+F 3 "~" H 4400 2750 50  0001 C CNN
+	1    4400 2750
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	4200 2850 4100 2850
+NoConn ~ 3700 1600
+NoConn ~ 3800 1600
+NoConn ~ 3900 1600
+NoConn ~ 4000 1600
+NoConn ~ 4100 1600
+NoConn ~ 3500 2500
+NoConn ~ 3600 2500
+NoConn ~ 3400 2500
+$Comp
+L Connector:Conn_01x03_Male J4
+U 1 1 620C664D
+P 3500 1400
+F 0 "J4" V 3550 1100 50  0000 L CNN
+F 1 "SR display" V 3650 800 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 3500 1400 50  0001 C CNN
+F 3 "~" H 3500 1400 50  0001 C CNN
+	1    3500 1400
+	0    1    1    0   
+$EndComp
+NoConn ~ 4300 2500
+$Comp
+L power:GND #PWR0103
+U 1 1 620F3EA9
+P 4000 1300
+F 0 "#PWR0103" H 4000 1050 50  0001 C CNN
+F 1 "GND" H 4005 1127 50  0000 C CNN
+F 2 "" H 4000 1300 50  0001 C CNN
+F 3 "" H 4000 1300 50  0001 C CNN
+	1    4000 1300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4400 1300 4700 1300
+Wire Wire Line
+	4100 3050 4200 3050
+Connection ~ 4100 2850
+Wire Wire Line
+	4100 2850 4100 2500
+Wire Wire Line
+	4300 1300 4300 1500
+$Comp
+L Device:R_Small R1
+U 1 1 620F73A3
+P 4400 1400
+F 0 "R1" H 4459 1446 50  0000 L CNN
+F 1 "4k7" H 4459 1355 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" H 4400 1400 50  0001 C CNN
+F 3 "~" H 4400 1400 50  0001 C CNN
+	1    4400 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R2
+U 1 1 620F743A
+P 4700 1400
+F 0 "R2" H 4759 1446 50  0000 L CNN
+F 1 "4k7" H 4759 1355 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" H 4700 1400 50  0001 C CNN
+F 3 "~" H 4700 1400 50  0001 C CNN
+	1    4700 1400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4700 1550 4700 1500
+Wire Wire Line
+	4400 1500 4300 1500
+Connection ~ 4300 1500
+Wire Wire Line
+	4200 1300 4200 1550
+Wire Wire Line
+	4300 1500 4300 1600
+Wire Wire Line
+	4700 1550 4200 1550
+Connection ~ 4200 1550
+Wire Wire Line
+	4200 1550 4200 1600
+$Comp
+L Connector:Conn_01x02_Male J1
+U 1 1 620FBC65
+P 4400 3050
+F 0 "J1" H 4350 3050 50  0000 R CNN
+F 1 "Power" H 4350 2950 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 4400 3050 50  0001 C CNN
+F 3 "~" H 4400 3050 50  0001 C CNN
+	1    4400 3050
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	4200 3150 4000 3150
+Connection ~ 4000 3150
+Wire Wire Line
+	4000 3150 4000 3200
+Wire Wire Line
+	4200 2750 4200 2650
+NoConn ~ 3600 2750
+NoConn ~ 3600 3050
+Connection ~ 3200 3150
+Wire Wire Line
+	3200 3150 3200 3200
+Wire Wire Line
+	3200 2850 3200 3150
+Wire Wire Line
+	3900 3250 3600 3250
+Wire Wire Line
+	4700 2650 4200 2650
+Connection ~ 4200 2650
+Wire Wire Line
+	4200 2650 4200 2500
+Wire Wire Line
+	4100 2850 4100 3050
+$Comp
+L power:VCC #PWR0102
+U 1 1 62108130
+P 4700 2650
+F 0 "#PWR0102" H 4700 2500 50  0001 C CNN
+F 1 "VCC" H 4715 2823 50  0000 C CNN
+F 2 "" H 4700 2650 50  0001 C CNN
+F 3 "" H 4700 2650 50  0001 C CNN
+	1    4700 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR0104
+U 1 1 621081C7
+P 4700 1300
+F 0 "#PWR0104" H 4700 1150 50  0001 C CNN
+F 1 "VCC" H 4715 1473 50  0000 C CNN
+F 2 "" H 4700 1300 50  0001 C CNN
+F 3 "" H 4700 1300 50  0001 C CNN
+	1    4700 1300
+	1    0    0    -1  
+$EndComp
+Connection ~ 4700 1300
+$Comp
+L Connector:Conn_01x02_Male J2
+U 1 1 6211BE04
+P 5000 3050
+F 0 "J2" H 4950 3050 50  0000 R CNN
+F 1 "Power" H 4950 2950 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 5000 3050 50  0001 C CNN
+F 3 "~" H 5000 3050 50  0001 C CNN
+	1    5000 3050
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	4200 3050 4800 3050
+Wire Wire Line
+	4200 3150 4800 3150
+Connection ~ 4200 3150
+Connection ~ 4200 3050
+$Comp
+L Ken:STM8Module U1
+U 1 1 6214C009
+P 3850 2050
+F 0 "U1" H 3800 2150 50  0000 L CNN
+F 1 "STM8Module" H 3650 2000 50  0000 L CNN
+F 2 "Ken:DIP-20_600_ELL" H 3850 2050 50  0001 C CNN
+F 3 "" H 3850 2050 50  0001 C CNN
+	1    3850 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Ken:DS3231Module U2
+U 1 1 6214C2D8
+P 4200 1100
+F 0 "U2" V 4450 1000 50  0000 L CNN
+F 1 "DS3231Module" V 4350 850 50  0000 L CNN
+F 2 "Ken:DS3231_Module" H 4600 750 50  0001 C CNN
+F 3 "" H 4200 1100 50  0001 C CNN
+	1    4200 1100
+	0    1    -1   0   
+$EndComp
+Connection ~ 4400 1300
+$EndSCHEMATC
